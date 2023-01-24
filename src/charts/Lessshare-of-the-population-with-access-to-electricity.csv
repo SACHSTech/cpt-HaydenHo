@@ -1,0 +1,370 @@
+Entity,Code,Year,Access to electricity (% of population)
+Hong Kong,HKG,1990,100
+Hong Kong,HKG,1991,100
+Hong Kong,HKG,1992,100
+Hong Kong,HKG,1993,100
+Hong Kong,HKG,1994,100
+Hong Kong,HKG,1995,100
+Hong Kong,HKG,1996,100
+Hong Kong,HKG,1997,100
+Hong Kong,HKG,1998,100
+Hong Kong,HKG,1999,100
+Hong Kong,HKG,2000,100
+Hong Kong,HKG,2001,100
+Hong Kong,HKG,2002,100
+Hong Kong,HKG,2003,100
+Hong Kong,HKG,2004,100
+Hong Kong,HKG,2005,100
+Hong Kong,HKG,2006,100
+Hong Kong,HKG,2007,100
+Hong Kong,HKG,2008,100
+Hong Kong,HKG,2009,100
+Hong Kong,HKG,2010,100
+Hong Kong,HKG,2011,100
+Hong Kong,HKG,2012,100
+Hong Kong,HKG,2013,100
+Hong Kong,HKG,2014,100
+Hong Kong,HKG,2015,100
+Hong Kong,HKG,2016,100
+Hong Kong,HKG,2017,100
+Hong Kong,HKG,2018,100
+Hong Kong,HKG,2019,100
+Hong Kong,HKG,2020,100
+Japan,JPN,1990,100
+Japan,JPN,1991,100
+Japan,JPN,1992,100
+Japan,JPN,1993,100
+Japan,JPN,1994,100
+Japan,JPN,1995,100
+Japan,JPN,1996,100
+Japan,JPN,1997,100
+Japan,JPN,1998,100
+Japan,JPN,1999,100
+Japan,JPN,2000,100
+Japan,JPN,2001,100
+Japan,JPN,2002,100
+Japan,JPN,2003,100
+Japan,JPN,2004,100
+Japan,JPN,2005,100
+Japan,JPN,2006,100
+Japan,JPN,2007,100
+Japan,JPN,2008,100
+Japan,JPN,2009,100
+Japan,JPN,2010,100
+Japan,JPN,2011,100
+Japan,JPN,2012,100
+Japan,JPN,2013,100
+Japan,JPN,2014,100
+Japan,JPN,2015,100
+Japan,JPN,2016,100
+Japan,JPN,2017,100
+Japan,JPN,2018,100
+Japan,JPN,2019,100
+Japan,JPN,2020,100
+North America,,1990,100
+North America,,1991,100
+North America,,1992,100
+North America,,1993,100
+North America,,1994,100
+North America,,1995,100
+North America,,1996,100
+North America,,1997,100
+North America,,1998,100
+North America,,1999,100
+North America,,2000,100
+North America,,2001,100
+North America,,2002,100
+North America,,2003,100
+North America,,2004,100
+North America,,2005,100
+North America,,2006,100
+North America,,2007,100
+North America,,2008,100
+North America,,2009,100
+North America,,2010,100
+North America,,2011,100
+North America,,2012,100
+North America,,2013,100
+North America,,2014,100
+North America,,2015,100
+North America,,2016,100
+North America,,2017,100
+North America,,2018,100
+North America,,2019,100
+North America,,2020,100
+Singapore,SGP,1990,100
+Singapore,SGP,1991,100
+Singapore,SGP,1992,100
+Singapore,SGP,1993,100
+Singapore,SGP,1994,100
+Singapore,SGP,1995,100
+Singapore,SGP,1996,100
+Singapore,SGP,1997,100
+Singapore,SGP,1998,100
+Singapore,SGP,1999,100
+Singapore,SGP,2000,100
+Singapore,SGP,2001,100
+Singapore,SGP,2002,100
+Singapore,SGP,2003,100
+Singapore,SGP,2004,100
+Singapore,SGP,2005,100
+Singapore,SGP,2006,100
+Singapore,SGP,2007,100
+Singapore,SGP,2008,100
+Singapore,SGP,2009,100
+Singapore,SGP,2010,100
+Singapore,SGP,2011,100
+Singapore,SGP,2012,100
+Singapore,SGP,2013,100
+Singapore,SGP,2014,100
+Singapore,SGP,2015,100
+Singapore,SGP,2016,100
+Singapore,SGP,2017,100
+Singapore,SGP,2018,100
+Singapore,SGP,2019,100
+Singapore,SGP,2020,100
+South Asia,,1993,46.839866638183594
+South Asia,,1994,46.401363372802734
+South Asia,,1995,47.87918472290039
+South Asia,,1996,48.97210693359375
+South Asia,,1997,50.49216079711914
+South Asia,,1998,54.27427291870117
+South Asia,,1999,57.65987014770508
+South Asia,,2000,56.24021530151367
+South Asia,,2001,54.172332763671875
+South Asia,,2002,59.854366302490234
+South Asia,,2003,61.48851013183594
+South Asia,,2004,61.816036224365234
+South Asia,,2005,64.8130111694336
+South Asia,,2006,65.85873413085938
+South Asia,,2007,68.02852630615234
+South Asia,,2008,70.32846069335938
+South Asia,,2009,72.36296844482422
+South Asia,,2010,73.189453125
+South Asia,,2011,67.05361938476562
+South Asia,,2012,77.48938751220703
+South Asia,,2013,78.71407318115234
+South Asia,,2014,80.75984191894531
+South Asia,,2015,84.6089859008789
+South Asia,,2016,86.29912567138672
+South Asia,,2017,89.39993286132812
+South Asia,,2018,92.7130126953125
+South Asia,,2019,94.04364013671875
+South Asia,,2020,95.78428649902344
+South Korea,KOR,1990,99.88284301757812
+South Korea,KOR,1991,99.91267395019531
+South Korea,KOR,1992,99.94221496582031
+South Korea,KOR,1993,99.96943664550781
+South Korea,KOR,1994,99.98912048339844
+South Korea,KOR,1995,100
+South Korea,KOR,1996,100
+South Korea,KOR,1997,100
+South Korea,KOR,1998,100
+South Korea,KOR,1999,100
+South Korea,KOR,2000,100
+South Korea,KOR,2001,100
+South Korea,KOR,2002,100
+South Korea,KOR,2003,100
+South Korea,KOR,2004,100
+South Korea,KOR,2005,100
+South Korea,KOR,2006,100
+South Korea,KOR,2007,100
+South Korea,KOR,2008,100
+South Korea,KOR,2009,100
+South Korea,KOR,2010,100
+South Korea,KOR,2011,100
+South Korea,KOR,2012,100
+South Korea,KOR,2013,100
+South Korea,KOR,2014,100
+South Korea,KOR,2015,100
+South Korea,KOR,2016,100
+South Korea,KOR,2017,100
+South Korea,KOR,2018,100
+South Korea,KOR,2019,100
+South Korea,KOR,2020,100
+Sweden,SWE,1990,100
+Sweden,SWE,1991,100
+Sweden,SWE,1992,100
+Sweden,SWE,1993,100
+Sweden,SWE,1994,100
+Sweden,SWE,1995,100
+Sweden,SWE,1996,100
+Sweden,SWE,1997,100
+Sweden,SWE,1998,100
+Sweden,SWE,1999,100
+Sweden,SWE,2000,100
+Sweden,SWE,2001,100
+Sweden,SWE,2002,100
+Sweden,SWE,2003,100
+Sweden,SWE,2004,100
+Sweden,SWE,2005,100
+Sweden,SWE,2006,100
+Sweden,SWE,2007,100
+Sweden,SWE,2008,100
+Sweden,SWE,2009,100
+Sweden,SWE,2010,100
+Sweden,SWE,2011,100
+Sweden,SWE,2012,100
+Sweden,SWE,2013,100
+Sweden,SWE,2014,100
+Sweden,SWE,2015,100
+Sweden,SWE,2016,100
+Sweden,SWE,2017,100
+Sweden,SWE,2018,100
+Sweden,SWE,2019,100
+Sweden,SWE,2020,100
+Switzerland,CHE,1990,100
+Switzerland,CHE,1991,100
+Switzerland,CHE,1992,100
+Switzerland,CHE,1993,100
+Switzerland,CHE,1994,100
+Switzerland,CHE,1995,100
+Switzerland,CHE,1996,100
+Switzerland,CHE,1997,100
+Switzerland,CHE,1998,100
+Switzerland,CHE,1999,100
+Switzerland,CHE,2000,100
+Switzerland,CHE,2001,100
+Switzerland,CHE,2002,100
+Switzerland,CHE,2003,100
+Switzerland,CHE,2004,100
+Switzerland,CHE,2005,100
+Switzerland,CHE,2006,100
+Switzerland,CHE,2007,100
+Switzerland,CHE,2008,100
+Switzerland,CHE,2009,100
+Switzerland,CHE,2010,100
+Switzerland,CHE,2011,100
+Switzerland,CHE,2012,100
+Switzerland,CHE,2013,100
+Switzerland,CHE,2014,100
+Switzerland,CHE,2015,100
+Switzerland,CHE,2016,100
+Switzerland,CHE,2017,100
+Switzerland,CHE,2018,100
+Switzerland,CHE,2019,100
+Switzerland,CHE,2020,100
+Ukraine,UKR,1990,100
+Ukraine,UKR,1991,100
+Ukraine,UKR,1992,100
+Ukraine,UKR,1993,100
+Ukraine,UKR,1994,100
+Ukraine,UKR,1995,100
+Ukraine,UKR,1996,100
+Ukraine,UKR,1997,100
+Ukraine,UKR,1998,100
+Ukraine,UKR,1999,100
+Ukraine,UKR,2000,100
+Ukraine,UKR,2001,100
+Ukraine,UKR,2002,100
+Ukraine,UKR,2003,100
+Ukraine,UKR,2004,100
+Ukraine,UKR,2005,99.88555908203125
+Ukraine,UKR,2006,100
+Ukraine,UKR,2007,99.80000305175781
+Ukraine,UKR,2008,100
+Ukraine,UKR,2009,100
+Ukraine,UKR,2010,100
+Ukraine,UKR,2011,100
+Ukraine,UKR,2012,99.86749267578125
+Ukraine,UKR,2013,100
+Ukraine,UKR,2014,100
+Ukraine,UKR,2015,100
+Ukraine,UKR,2016,100
+Ukraine,UKR,2017,100
+Ukraine,UKR,2018,100
+Ukraine,UKR,2019,100
+Ukraine,UKR,2020,100
+United Arab Emirates,ARE,1990,100
+United Arab Emirates,ARE,1991,100
+United Arab Emirates,ARE,1992,100
+United Arab Emirates,ARE,1993,100
+United Arab Emirates,ARE,1994,100
+United Arab Emirates,ARE,1995,100
+United Arab Emirates,ARE,1996,100
+United Arab Emirates,ARE,1997,100
+United Arab Emirates,ARE,1998,100
+United Arab Emirates,ARE,1999,100
+United Arab Emirates,ARE,2000,100
+United Arab Emirates,ARE,2001,100
+United Arab Emirates,ARE,2002,100
+United Arab Emirates,ARE,2003,100
+United Arab Emirates,ARE,2004,100
+United Arab Emirates,ARE,2005,100
+United Arab Emirates,ARE,2006,100
+United Arab Emirates,ARE,2007,100
+United Arab Emirates,ARE,2008,100
+United Arab Emirates,ARE,2009,100
+United Arab Emirates,ARE,2010,100
+United Arab Emirates,ARE,2011,100
+United Arab Emirates,ARE,2012,100
+United Arab Emirates,ARE,2013,100
+United Arab Emirates,ARE,2014,100
+United Arab Emirates,ARE,2015,100
+United Arab Emirates,ARE,2016,100
+United Arab Emirates,ARE,2017,100
+United Arab Emirates,ARE,2018,100
+United Arab Emirates,ARE,2019,100
+United Arab Emirates,ARE,2020,100
+United Kingdom,GBR,1990,100
+United Kingdom,GBR,1991,100
+United Kingdom,GBR,1992,100
+United Kingdom,GBR,1993,100
+United Kingdom,GBR,1994,100
+United Kingdom,GBR,1995,100
+United Kingdom,GBR,1996,100
+United Kingdom,GBR,1997,100
+United Kingdom,GBR,1998,100
+United Kingdom,GBR,1999,100
+United Kingdom,GBR,2000,100
+United Kingdom,GBR,2001,100
+United Kingdom,GBR,2002,100
+United Kingdom,GBR,2003,100
+United Kingdom,GBR,2004,100
+United Kingdom,GBR,2005,100
+United Kingdom,GBR,2006,100
+United Kingdom,GBR,2007,100
+United Kingdom,GBR,2008,100
+United Kingdom,GBR,2009,100
+United Kingdom,GBR,2010,100
+United Kingdom,GBR,2011,100
+United Kingdom,GBR,2012,100
+United Kingdom,GBR,2013,100
+United Kingdom,GBR,2014,100
+United Kingdom,GBR,2015,100
+United Kingdom,GBR,2016,100
+United Kingdom,GBR,2017,100
+United Kingdom,GBR,2018,100
+United Kingdom,GBR,2019,100
+United Kingdom,GBR,2020,100
+United States,USA,1990,100
+United States,USA,1991,100
+United States,USA,1992,100
+United States,USA,1993,100
+United States,USA,1994,100
+United States,USA,1995,100
+United States,USA,1996,100
+United States,USA,1997,100
+United States,USA,1998,100
+United States,USA,1999,100
+United States,USA,2000,100
+United States,USA,2001,100
+United States,USA,2002,100
+United States,USA,2003,100
+United States,USA,2004,100
+United States,USA,2005,100
+United States,USA,2006,100
+United States,USA,2007,100
+United States,USA,2008,100
+United States,USA,2009,100
+United States,USA,2010,100
+United States,USA,2011,100
+United States,USA,2012,100
+United States,USA,2013,100
+United States,USA,2014,100
+United States,USA,2015,100
+United States,USA,2016,100
+United States,USA,2017,100
+United States,USA,2018,100
+United States,USA,2019,100
+United States,USA,2020,100
