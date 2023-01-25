@@ -89,3 +89,56 @@ public class DataPoint {
 
         this.addingTag++;
     }
+
+    /**
+     * gets position of datapoint
+     * @return int position
+     */
+    public int getPosition() {
+        return this.position;
+    }
+
+    /**
+     * gets pointsPerGame of datapoint
+     * @return int pointsPerGame
+     */
+    public double getPointsPerGame() {
+        return this.pointsPerGame;
+    }
+
+    /**
+     * gets reboundsPerGame of datapoint
+     * @return int reboundssPerGame
+     */
+    
+    public double getReboundsPerGame() {
+        return this.reboundsPerGame;
+    }
+
+    /**
+     * gets assistsPerGame of datapoint
+     * @return int assistsPerGame
+     */
+    public double getAssistsPerGame() {
+        return this.assistsPerGame;
+    }
+
+    /**
+     * gets careerWinShares of datapoint
+     * @return int careerWinShares
+     */
+    public double getCareerWinShares() {
+        return this.careerWinShares;
+    }
+    
+    /**
+     * gets athleteName 
+     * @return String athleteName
+     */
+
+    public String getAthleteName() {
+        return this.athleteName;
+    }
+}
+
+
