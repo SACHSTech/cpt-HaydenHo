@@ -30,13 +30,13 @@ public double addSort(GraphType graphtype, DataPoint datapoint) {
     this.sortingArray.add(datapoint);
     if(graphtype == GraphType.BYPOINTS) {
         this.sortingBy = GraphType.BYPOINTS;
-        return datapoint.getPpg();
+        return datapoint.getPointsPerGame();
     } else if (graphtype == GraphType.BYASSISTS) {
         this.sortingBy = GraphType.BYASSISTS;
-        return datapoint.getApg();
+        return datapoint.getAssistsPerGame();
     } else if (graphtype == GraphType.BYREBOUNDS) {
         this.sortingBy = GraphType.BYREBOUNDS;
-        return datapoint.getRpg();
+        return datapoint.getReboundsPerGame();
     } else if (graphtype == GraphType.BYWINSHARES) {
         this.sortingBy = GraphType.BYWINSHARES;
         return datapoint.getCareerWinShares();
@@ -55,11 +55,11 @@ public double addSort(GraphType graphtype, DataPoint datapoint) {
 public double getValue(DataPoint dataPoint) {
     //returns appropriate value depending on what the user asks for 
     if(sortingBy == GraphType.BYPOINTS) {
-        return dataPoint.getPpg();
+        return dataPoint.getPointsPerGame();
     } else if(sortingBy == GraphType.BYASSISTS) {
-        return dataPoint.getApg();
+        return dataPoint.getAssistsPerGame();
     } else if(sortingBy == GraphType.BYREBOUNDS) {
-        return dataPoint.getRpg();
+        return dataPoint.getReboundsPerGame();
     } else if(sortingBy == GraphType.BYWINSHARES) {
         return dataPoint.getCareerWinShares();
     } else {
@@ -80,6 +80,7 @@ public ArrayList<DataPoint> sort() {
    mergeSortHelper(0, sortingArray.size() - 1, temp);
 
    return sortingArray;
+}
     /**
      * takes splitted arrays and orders then
      * @param int from 
@@ -88,7 +89,7 @@ public ArrayList<DataPoint> sort() {
      * @param DataPoint[] temp
      */
 
-     private void merge(int from, int mid, int to, DataPoint[] temp) {
+     private void mergeSortHelper(int from, int mid, int to, DataPoint[] temp) {
         int i = from;       // track left array position
         int j = mid + 1;    // track right array position
         int k = from;       // track temp array position
@@ -119,10 +120,56 @@ public ArrayList<DataPoint> sort() {
         for (int x = from; x <= to; x++) {
             sortingArray.set(x, temp[x]);
         }
+      // Copy over elements from temp to arr
+       for(k = from; k <= to; k++) {
+
+        sortingArray.set(k, temp[k]);
+         }
     }
+
+      /**
+    * changes axis based on values from LineChart Series to ensure all values are included
+    * @param String axisName
+    * @return NumberAxis newAxis
+    */
+   public NumberAxis axis(String axisName) {
+    this.sort();
     
-    public enum GraphType {
-        BYPOINTS, BYASSISTS, BYREBOUNDS, BYWINSHARES;
+    if(this.getValue(this.sortingArray.get(0)) < this.currentLowest) {
+        this.currentLowest = this.getValue(this.sortingArray.get(0));
+        
+    } 
+
+    if(this.getValue(this.sortingArray.get(sortingArray.size() - 1)) + 5 > this.currentHighest) {
+        this.currentHighest = this.getValue(this.sortingArray.get(sortingArray.size() - 1)) + 5;
+        
     }
+
+    NumberAxis newAxis = new NumberAxis(axisName, this.currentLowest, this.currentHighest, (this.currentHighest - this.currentLowest)/25);
+    
+
+
+    return newAxis;
+
+
+}
+
+/**
+* gets sorted array and returns it
+* @return ArrayList<DataPoint> returnArray
+*/
+
+public ArrayList<DataPoint> getArray() {
+    this.sort();
+
+    ArrayList<DataPoint> returnArray = (ArrayList<DataPoint>) sortingArray.clone();
+    sortingArray = new ArrayList<>();
+
+    return returnArray;
+}
+
+    
+    
+
 }
 
