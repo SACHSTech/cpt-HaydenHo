@@ -88,3 +88,41 @@ public ArrayList<DataPoint> sort() {
      * @param DataPoint[] temp
      */
 
+     private void merge(int from, int mid, int to, DataPoint[] temp) {
+        int i = from;       // track left array position
+        int j = mid + 1;    // track right array position
+        int k = from;       // track temp array position
+
+        while (i <= mid && j <= to) {
+            if (getValue(sortingArray.get(i)) < getValue(sortingArray.get(j))) {
+                temp[k] = sortingArray.get(i);
+                i++;
+            } else {
+                temp[k] = sortingArray.get(j);
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= mid) {
+            temp[k] = sortingArray.get(i);
+            i++;
+            k++;
+        }
+
+        while (j <= to) {
+            temp[k] = sortingArray.get(j);
+            j++;
+            k++;
+        }
+
+        for (int x = from; x <= to; x++) {
+            sortingArray.set(x, temp[x]);
+        }
+    }
+    
+    public enum GraphType {
+        BYPOINTS, BYASSISTS, BYREBOUNDS, BYWINSHARES;
+    }
+}
+
