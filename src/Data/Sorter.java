@@ -71,3 +71,20 @@ public double getValue(DataPoint dataPoint) {
 
 
 
+/**
+ * sorts then retuns datapoint arraylist
+ * @return sortingArray
+ */
+public ArrayList<DataPoint> sort() {
+   DataPoint[] temp = new DataPoint[sortingArray.size()];
+   mergeSortHelper(0, sortingArray.size() - 1, temp);
+
+   return sortingArray;
+    /**
+     * takes splitted arrays and orders then
+     * @param int from 
+     * @param int mid
+     * @param int to
+     * @param DataPoint[] temp
+     */
+
