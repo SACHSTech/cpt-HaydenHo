@@ -19,3 +19,36 @@ public class DataPoint {
     private double winSharesPer;
     private String bRefTag;
     private int addingTag;
+
+    /**
+     * starts of datapoint tag as 0
+     */
+    public DataPoint() {
+        this.addingTag = 0;
+    }
+
+
+    /**
+     * adds value to properties based on previously added values
+     * @param value
+     */
+    public void add(String value) {
+        switch(addingTag) {
+            case 0:
+                this.position = Integer.parseInt(value);
+                break;
+            case 1:
+                this.athleteName = value;
+                break;
+            case 2:
+                this.startYear = Integer.parseInt(value);
+                break;
+            case 3:
+                this.endYear = Integer.parseInt(value);
+                break;
+            case 4:
+                this.matchCount = Integer.parseInt(value);
+                break;
+            case 5:
+                this.totalMinutes = Double.parseDouble(value); 
+                break;
