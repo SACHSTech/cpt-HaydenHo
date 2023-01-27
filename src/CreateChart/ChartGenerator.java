@@ -263,3 +263,95 @@ public class ChartGenerator {
         return lineChart;
     }
     
+    /**
+     * Update whether chart contains following series
+     * @param boolean showPoints 
+     * @param boolean showAssists
+     * @param boolean showRebounds
+     * @param boolean showWinShares
+     */
+    public void updateBooleans(boolean showPoints, boolean showAssists, boolean showRebounds, boolean showWinShares) {
+        this.showPoints = showPoints;
+        this.showAssists = showAssists;
+        this.showRebounds = showRebounds;
+        this.showWinShares = showWinShares;
+
+        this.createRankLineChart();
+
+    }
+
+
+    /**
+     * Changes bar chart when user requests
+     * @param graphType
+     * @param starting
+     */
+
+    public void changeBarChart(GraphType graphType, int starting) {
+        this.barType = graphType;
+        this.barStart = starting;
+        this.createBarChart();
+    }
+
+
+    /**
+     * Changes (points/rebounds/assists/winshares) vs rank
+     * @param rank
+     */
+
+    public void setShowRank(int rank) {
+        this.showRank = rank;
+        //creates type of linechart 
+        if(rank != 0) {
+            this.createRankLineChart();
+        }
+    }
+    
+    /**
+     * Creates a LineChart Series for Points
+     * @param startRank starting rank in series
+     * @param endRank ending rank in series
+     * @return LineChart.Series<Double, Double> object
+     */
+    public LineChart.Series<Double, Double> pointsSeries(int startRank, int endRank) {
+        ObservableList<XYChart.Data<Double, Double>> pointsData = FXCollections.observableArrayList();
+
+        //loops through DataPoint object and adds data to series
+        for(int i = startRank - 1; i < endRank; i++) {
+            pointsData.add(new XYChart.Data<>((double) i + 1, sorter.addSort(GraphType.BYPOINTS, scraper.get(i))));
+
+            
+        }
+
+        LineChart.Series<Double, Double> points = new LineChart.Series<>("Points Per Game", pointsData);
+
+        return points;
+    }
+
+    /**
+     * Creates series for (points/assists/rebounds/winshares) vs rank
+     * @return LineChart.Series<Double, Double> rankData
+     */
+    public LineChart.Series<Double, Double> rankSeries() {
+        ObservableList<XYChart.Data<Double, Double>> rankData = FXCollections.observableArrayList();
+
+        //Creates dataSeries based on type of graph user wants to see
+        for(int i = 0; i < 500; i++) {
+            switch(this.showRank) {
+                case 1:
+                    rankData.add(new XYChart.Data<>(sorter.addSort(GraphType.BYPOINTS, scraper.get(i)), (double) scraper.get(i).getRank()));
+                    break;
+                case 2:
+                    rankData.add(new XYChart.Data<>(sorter.addSort(GraphType.BYASSISTS, scraper.get(i)), (double) scraper.get(i).getRank()));
+                    break;
+                case 3:
+                    rankData.add(new XYChart.Data<>(sorter.addSort(GraphType.BYREBOUNDS, scraper.get(i)), (double) scraper.get(i).getRank()));
+                    break;
+                case 4:
+                    rankData.add(new XYChart.Data<>(sorter.addSort(GraphType.BYWINSHARES, scraper.get(i)), (double) scraper.get(i).getRank()));
+                    break;
+            
+            }
+            
+        }
+
