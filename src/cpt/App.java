@@ -13,15 +13,10 @@ import javafx.scene.control.TabPane;
 import javafx.scene.control.Tab;
 
 
-public class App {
-
- 
 /**
  * A line chart demonstrating a CategoryAxis implementation.
  */
 public class App extends Application {
-
-    
 
     /**
      * Overriding JavaFX Application Class method to run wanted script
@@ -30,7 +25,7 @@ public class App extends Application {
     @Override public void start(Stage primaryStage) throws Exception {
         //creates objects to create chart/controls
         ChartGenerator chart = new ChartGenerator();        
-        ChartValueController controller = new ChartValueController();
+        ChartValueControl controller = new ChartValueControl();
         controller.addChartObject(chart);
         
         //creates tabs for linechart 
