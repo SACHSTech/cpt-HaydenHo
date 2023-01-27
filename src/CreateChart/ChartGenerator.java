@@ -121,3 +121,46 @@ public class ChartGenerator {
                     new BarChart.Data(player[3].getPlayerName(), player[1].getReboundsPerGame()),
                     new BarChart.Data(player[4].getPlayerName(), player[4].getReboundsPerGame())))
             );
+        chart = new BarChart(xAxis, yAxis, barChartData, 25.0d);
+
+        chart.setPrefWidth(2500);
+
+        if(barType == GraphType.BYRANK) {
+            chart.setTitle("Stats of " + (barStart) + " to " + (barStart + 4) + " Ranked Players");
+        } else if(barType == GraphType.BYPOINTS) {
+            chart.setTitle("Stats of " + (barStart) + " to " + (barStart + 4) + " Scorers");
+        } else if(barType == GraphType.BYASSISTS) {
+            chart.setTitle("Stats of " + (barStart) + " to " + (barStart + 4) + " Assisters");
+        } else if(barType == GraphType.BYREBOUNDS) {
+            chart.setTitle("Stats of " + (barStart) + " to " + (barStart + 4) + " Rebounders");
+        }
+         
+        //adds chart to hbox
+        this.barChart.getChildren().clear();
+        this.barChart.getChildren().add(chart);
+
+
+        //returns hbox
+        return this.barChart;
+    }
+
+
+    /**
+     * Creates a Linechart based of ranks the user wants to see and the stats chosen
+     * @param startRank starting rank plotted on graph
+     * @param endRank ending rank plotted on graph
+     */
+    public HBox createRankLineChart() {
+        //creates hbox object for linechart
+        HBox currentChart = new HBox();
+        currentChart.setPrefWidth(1700);
+        currentChart.setMinWidth(1000);
+        currentChart.setMaxWidth(2500);
+        currentChart.setPadding(new Insets(50));
+
+        //creates default axis
+        NumberAxis xAxis = new NumberAxis("Rank", startRank, endRank, 1);
+        NumberAxis yAxis = new NumberAxis("Value", 0, 100, 0.1);
+        
+
+
