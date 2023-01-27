@@ -355,3 +355,28 @@ public class ChartGenerator {
             
         }
 
+        LineChart.Series<Double, Double> rank = new LineChart.Series<>("Rank", rankData);
+
+        return rank;
+    }
+
+    
+    /**
+     * Creates a LineChart Series for assists
+    * @param startRank starting rank in series
+     * @param endRank ending rank in series
+     * @return LineChart.Series<Double, Double> object
+     */
+    public LineChart.Series<Double, Double> assistsSeries(int startRank, int endRank) {
+        ObservableList<XYChart.Data<Double, Double>> assistsData = FXCollections.observableArrayList();
+
+        //loops through DataPoint object and adds data to series
+        for(int i = startRank - 1; i < endRank; i++) {
+            assistsData.add(new XYChart.Data<>((double) i + 1, sorter.addSort(GraphType.BYASSISTS, scraper.get(i))));
+        }
+
+        LineChart.Series<Double, Double> assists = new LineChart.Series<>("Assists Per Game", assistsData);
+
+        return assists;
+    }
+
