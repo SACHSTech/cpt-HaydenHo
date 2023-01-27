@@ -207,3 +207,59 @@ public class ChartGenerator {
         
        
 
+        //create and return new LineChart object
+        LineChart chart = new LineChart(xAxis, yAxis, lineChartData);
+
+
+        //Creates a title based on the selected stats
+        String title = "";
+        if(showRank != 0) {
+            title += "Rank vs ";
+            switch(showRank) {
+                case 1:
+                    title += "Points";
+                    break;
+                case 2:
+                    title += "Assists";
+                    break;
+                case 3:
+                    title += "Rebounds";
+                    break;
+                case 4:
+                    title += "Career Win Shares";
+                    break;
+                
+            }
+        } else if(showPoints || showAssists || showRebounds || showWinShares) {
+            if(showPoints) {
+                title += "Points, ";
+                
+            } if(showAssists) {
+                title += "Assists, ";
+                
+            } if(showRebounds) {
+                title += "Rebounds, ";
+                
+            } if(showWinShares) {
+                title += "Win Shares, ";
+               
+            }
+
+            title += "by Rank";
+
+            
+        }
+        //resets sorter object
+        this.sorter = new Sorter();
+
+        title += " on SLAM's 2011 Top 500 Players";
+
+        //edits chart properties then adds it to hbox
+        chart.setTitle(title);
+        chart.setPrefWidth(2500);
+        this.lineChart.getChildren().clear();
+        this.lineChart.getChildren().add(chart);
+
+        return lineChart;
+    }
+    
