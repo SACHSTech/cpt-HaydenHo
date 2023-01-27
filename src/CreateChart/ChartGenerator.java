@@ -164,3 +164,46 @@ public class ChartGenerator {
         
 
 
+        ObservableList<XYChart.Series<Double,Double>> lineChartData =
+            FXCollections.observableArrayList();
+
+        //add lines depending on selected stats
+        if(showRank != 0) {
+            lineChartData.add(this.rankSeries());
+            
+            //creates appropriate axis
+            NumberAxis xAxis1 = sorter.axis("Stat Value");
+            xAxis = xAxis1;
+            yAxis = new NumberAxis("Rank", 0, 500, 1);
+        } else {
+            //adds stat series to linechart and updates axis based on user input
+            if(showPoints) {
+                lineChartData.add(this.pointsSeries(startRank, endRank));
+
+                NumberAxis yAxis1 = sorter.axis("Value");
+                yAxis = yAxis1;
+
+            } if(showAssists) {
+                lineChartData.add(this.assistsSeries(startRank, endRank));
+
+                NumberAxis yAxis1 = sorter.axis("Value");
+                yAxis = yAxis1;
+
+            } if(showRebounds) {
+                lineChartData.add(this.reboundsSeries(startRank, endRank));
+
+                NumberAxis yAxis1 = sorter.axis("Value");
+                yAxis = yAxis1;
+
+            } if(showWinShares) {
+                lineChartData.add(this.winshareSeries(startRank, endRank));
+
+                NumberAxis yAxis1 = sorter.axis("Value");
+                yAxis = yAxis1;
+
+            }
+        }
+
+        
+       
+
