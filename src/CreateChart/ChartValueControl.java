@@ -230,5 +230,74 @@ public class ChartValueControl {
             boolean four = this.getRankBooleans().get(3);
 
 
+            //if any of the variables are selected, then update graph            
+            if(one || two || three || four) {
+                chartObject.updateBooleans(one, two, three, four);
+                this.secondaryPanel = false;
+                this.reset();
+            }
+                
+
+        });
+     
+
+    }
+
+    /**
+     * creates initial bar chart controls
+     */
+
+    public void initialBarControl() {
+        //creates vbox for lineControls
+        VBox vbox = new VBox();
+        vbox.setSpacing(5);
+        vbox.setAlignment(Pos.CENTER_LEFT);
+
+        //creates elements for controls
+
+        Text txt = new Text();
+        txt.setText("Select Stat");
+ 
+        ToggleGroup tg = new ToggleGroup();
+        RadioButton rb1 = new RadioButton("Rank");
+        rb1.setToggleGroup(tg);
+ 
+        RadioButton rb2 = new RadioButton("Points");
+        rb2.setToggleGroup(tg);
+ 
+        RadioButton rb3 = new RadioButton("Assists");
+        rb3.setToggleGroup(tg);
+
+        RadioButton rb4 = new RadioButton("Rebounds");
+        rb4.setToggleGroup(tg);
+
+
+
+        Text text1 = new Text();      
+      
+        //Setting the text to be added. 
+        text1.setText("Position");
+
+        Slider position = new Slider(1, 496, 50);
+        position.setShowTickMarks(true);
+        position.setPrefWidth(200);
+        position.setShowTickLabels(true);
+        position.setMajorTickUnit(50f);
+        position.setBlockIncrement(50f);
+
+        
+
+        Button submit = new Button("Submit");
+
+        //adds elements to vbox
+        vbox.getChildren().addAll(txt, rb1, rb2, rb3, rb4, text1, position, submit);
+        vbox.setPrefWidth(400);
+        vbox.setMinWidth(250);
+        vbox.setMaxWidth(700);
+
+        //adds vbox to stage
+        this.addBarControl(vbox);
+
+
 
 }
