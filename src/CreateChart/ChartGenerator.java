@@ -380,3 +380,65 @@ public class ChartGenerator {
         return assists;
     }
 
+    /**
+     * Creates a LineChart Series for rebounds
+     * @param startRank starting rank in series
+     * @param endRank ending rank in series
+     * @return LineChart.Series<Double, Double> object
+     */
+    public LineChart.Series<Double, Double> reboundsSeries(int startRank, int endRank) {
+        ObservableList<XYChart.Data<Double, Double>> reboundsData = FXCollections.observableArrayList();
+
+
+        //loops through DataPoint object and adds data to series
+        for(int i = startRank - 1; i < endRank; i++) {
+            reboundsData.add(new XYChart.Data<>((double) i + 1, sorter.addSort(GraphType.BYREBOUNDS, scraper.get(i))));
+        }
+
+        LineChart.Series<Double, Double> rebounds = new LineChart.Series<>("Rebounds Per Game", reboundsData);
+
+        return rebounds;
+    }
+
+    /**
+     * Creates a LineChart Series for win shares
+     * @param startRank starting rank in series
+     * @param endRank ending rank in series
+     * @return LineChart.Series<Double, Double> object
+     */
+    public LineChart.Series<Double, Double> winshareSeries(int startRank, int endRank) {
+        ObservableList<XYChart.Data<Double, Double>> winshareSeries = FXCollections.observableArrayList();
+
+        //loops through DataPoint object and adds data to series
+
+        for(int i = startRank - 1; i < endRank; i++) {
+            winshareSeries.add(new XYChart.Data<>((double) i + 1, sorter.addSort(GraphType.BYWINSHARES, scraper.get(i))));
+        }
+
+        LineChart.Series<Double, Double> winshares = new LineChart.Series<>("Total Win Shares", winshareSeries);
+
+        return winshares;
+    }
+
+    /**
+     * Changes the rank the chart starts at when in (rank vs points/assists/rebounds)
+     * @param int startRank 
+     */
+
+
+    public void setStartRank(int startRank) {
+        this.startRank = startRank;
+        
+    }
+
+
+    /**
+     * Changes the rank the chart ends at when in (rank vs points/assists/rebounds)
+     * @param int endRank 
+     */
+
+    public void setEndRank(int endRank) {
+        this.endRank = endRank;
+    }    
+ 
+}
