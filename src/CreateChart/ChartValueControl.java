@@ -299,5 +299,58 @@ public class ChartValueControl {
         this.addBarControl(vbox);
 
 
+        //when submitted, change graph
+        submit.setOnAction((ActionEvent t) -> {
+            if(rb1.isSelected()) {
+                chartObject.changeBarChart(GraphType.BYRANK, (int) position.getValue());
+            } else if(rb2.isSelected()) {  
+                chartObject.changeBarChart(GraphType.BYPOINTS, (int) position.getValue());
+            } else if(rb3.isSelected()) {
+                chartObject.changeBarChart(GraphType.BYASSISTS, (int) position.getValue());
+            } else if(rb4.isSelected()) {
+                chartObject.changeBarChart(GraphType.BYREBOUNDS, (int) position.getValue());
+            }
+
+
+
+        });
+        
+ 
+    }
+
+    /**
+     * adds vbox to main stage
+     * @return VBox barControls vbox with controls
+     */
+    public VBox barControl() {
+        initialBarControl();
+        return barControls;
+    }
+
+    /**
+     * adds inputted vbox to object's overall vbox for bar charts
+     */
+    public void addBarControl(VBox newBox) {
+        barControls.getChildren().addAll(newBox);
+    }
+
+    /**
+     * adds inputted vbox to object's overall vbox for line charts
+     */
+    public void addLineControl(VBox newBox) {
+        lineControls.getChildren().addAll(newBox);
+      
+    }
+
+    
+    /**
+     * initializes line controls 
+     * @return  VBox lineControls vbox containing line controls
+     */
+    public VBox lineControl() {
+        initialLineControl();
+        return lineControls;
+    }
+
 
 }
