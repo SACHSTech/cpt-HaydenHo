@@ -352,5 +352,27 @@ public class ChartValueControl {
         return lineControls;
     }
 
+    /**
+     * resets line controls
+     */
+    public void reset() {
+        lineControls.getChildren().clear();
+        lineControl();
+    }
 
+    /**
+     * gets boolean values if needed by ChartGenerator file
+     * @return ArrayList<Boolean> rankBooleans
+     */
+    public ArrayList<Boolean> getRankBooleans() {
+        return rankBooleans;
+    }
+
+    /**
+     * connects ChartGenerator object to ChartValueControl object
+     * @param chart
+     */
+    public void addChartObject(ChartGenerator chart) {
+        this.chartObject = chart;
+    }
 }
