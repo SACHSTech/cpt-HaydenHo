@@ -108,5 +108,127 @@ public class ChartValueControl {
 
 
         
+        //when the rank button is clicked, then enable rank sliders
+        rb1.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
+                if (isNowSelected) {    
+                    fromSlider.setDisable(false);
+                    toSlider.setDisable(false);
+                } else {
+                    fromSlider.setDisable(true);
+                    toSlider.setDisable(true);
+                }
+            }
+        });
+
+        //submit button
+
+        Button submit = new Button("Submit");
+
+        //add all elements into vbo 
+        vbox.getChildren().addAll(txt, rb1, rb2, rb3, rb4, rb5, text, fromSlider, text1, toSlider, submit);
+        vbox.setPrefWidth(400);
+        vbox.setMinWidth(250);
+        vbox.setMaxWidth(700);
+
+        //add vbox into linecontrol vbox
+        this.addLineControl(vbox);
+
+        //when submit button is pressed, either create new graph, or create next prompt
+        submit.setOnAction((ActionEvent t) -> {
+            //if the slider is less than the slide, then chart object rank gets converted to int and get value
+            if (fromSlider.getValue() < toSlider.getValue()) {
+                
+                chartObject.setEndRank((int)toSlider.getValue());
+                chartObject.setStartRank((int)fromSlider.getValue());
+
+                //if the next panel wasn't enabled, and the rank slider was selected, then create next prompt
+                if(!secondaryPanel && rb1.isSelected() ) {
+                    chartObject.setShowRank(0);
+                    nextLineChart();
+                } 
+                
+            } else {
+
+                //otherwise, create new linechart with (points/assists/rebounds/winshares) vs rank
+                if(rb2.isSelected()) {
+                    chartObject.setShowRank(1);
+                } else if(rb3.isSelected()){
+                    chartObject.setShowRank(2);
+                } else if(rb4.isSelected()) {
+                    chartObject.setShowRank(3);
+                } else if(rb5.isSelected()) {
+                    chartObject.setShowRank(4);
+                } else {
+                    
+                }
+            }
+
+            
+            
+            
+        });
+        
+ 
+    }
+
+    
+
+    /**
+     * creates next prompt if user is looking for rank vs (points/assists/rebounds/winshares)
+     */
+    
+    public void nextLineChart() {
+        this.secondaryPanel = true;
+
+        //creates prompt elements
+
+        
+        RadioButton rb2 = new RadioButton("Points");
+ 
+        RadioButton rb3 = new RadioButton("Assists");
+
+        RadioButton rb4 = new RadioButton("Rebounds");
+
+        RadioButton rb5 = new RadioButton("Win Shares");
+
+        VBox vbox = new VBox();
+
+        Text yaxis = new Text();      
+      
+        //Setting the text to be added. 
+        yaxis.setText("Y-Axis"); 
+
+        Button submit = new Button("Submit");
+
+        //adds elements into vbox
+
+        vbox.getChildren().addAll(yaxis, rb2, rb3, rb4, rb5, submit);
+            
+        vbox.setSpacing(5);
+        vbox.setAlignment(Pos.CENTER_LEFT);
+
+
+        //add vbox to stage
+      
+        this.addLineControl(vbox);
+
+
+        //when teh button is pressed, update graph according to elements selected
+        submit.setOnAction((ActionEvent t) -> {
+    
+            rankBooleans.add(0, rb2.isSelected());
+            rankBooleans.add(1, rb3.isSelected());
+            rankBooleans.add(2, rb4.isSelected());
+            rankBooleans.add(3, rb5.isSelected());
+
+
+            boolean one = this.getRankBooleans().get(0);
+            boolean two = this.getRankBooleans().get(1);
+            boolean three = this.getRankBooleans().get(2);
+            boolean four = this.getRankBooleans().get(3);
+
+
 
 }
