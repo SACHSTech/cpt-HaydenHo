@@ -8,7 +8,7 @@ public class CSVScraper  {
     public CSVScraper() {
          //create buffered reader for stats file
          try {
-            BufferedReader br = new BufferedReader(new FileReader("src/data/stats.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("src/Data/stats.csv"));
             String line =  null;
    
              //ArrayList used for containing data

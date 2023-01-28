@@ -77,7 +77,7 @@ public double getValue(DataPoint dataPoint) {
  */
 public ArrayList<DataPoint> sort() {
    DataPoint[] temp = new DataPoint[sortingArray.size()];
-   mergeSortHelper(0, sortingArray.size() - 1, temp);
+   mergeSortHelper(0, sortingArray.size() - 1, 0, temp);
 
    return sortingArray;
 }
