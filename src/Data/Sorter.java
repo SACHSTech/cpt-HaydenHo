@@ -168,7 +168,7 @@ public ArrayList<DataPoint> getArray() {
     return returnArray;
 }
 
-    
+
     
 
 }
